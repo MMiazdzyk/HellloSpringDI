@@ -10,8 +10,8 @@ public class CourseService implements CrudService<Course> {
 
     private CourseRepository courseRepository;
 
-    public CourseService() {
-        this.courseRepository  = new CourseRepository();
+    public CourseService(CourseRepository courseRepository) {
+        this.courseRepository = courseRepository;
     }
 
     @Override
