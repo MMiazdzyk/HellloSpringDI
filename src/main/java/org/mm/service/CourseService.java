@@ -1,29 +1,36 @@
 package org.mm.service;
 
 import org.mm.model.Course;
+import org.mm.repository.CourseRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class CourseService implements CrudService {
+public class CourseService implements CrudService<Course> {
+
+    private CourseRepository courseRepository;
+
+    public CourseService() {
+        this.courseRepository  = new CourseRepository();
+    }
 
     @Override
     public List<Course> getAll() {
+        return courseRepository.findAll();
+    }
+
+    @Override
+    public Course create(Course course) {
         return null;
     }
 
     @Override
-    public Object create(Object o) {
-        return null;
-    }
-
-    @Override
-    public Optional get(int id) {
+    public Optional<Course> get(int id) {
         return Optional.empty();
     }
 
     @Override
-    public void update(Object o, int id) {
+    public void update(Course course, int id) {
 
     }
 

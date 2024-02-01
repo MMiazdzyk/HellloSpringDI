@@ -12,7 +12,7 @@ public class CourseRepository implements CrudRepository<Course> {
     var courses = new ArrayList<Course>();
         courses.add(new Course(1,
                                "Spring course",
-                               "Spring basics configuration",
+                               "Spring basics configuration from repository",
                                "http://www.spring.io"));
         return courses;
     }
